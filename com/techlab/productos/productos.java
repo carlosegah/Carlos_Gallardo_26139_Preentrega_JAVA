@@ -1,3 +1,5 @@
+package com.techlab.productos;
+
 public class productos {
     private static int acumuladorId = 1;
     private final int id;
