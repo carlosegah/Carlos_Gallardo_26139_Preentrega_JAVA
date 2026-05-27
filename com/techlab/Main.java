@@ -46,8 +46,16 @@ public class Main {
 
         switch (tipo) {
             case 1: 
-                System.out.println("Fecha de vencimiento (AAAA/MM/DD): ");
-                LocalDate fecha = LocalDate.parse(sc.nextLine());
+                System.out.println("Fecha de vencimiento (AAAA-MM-DD): ");
+                LocalDate fecha = null;
+                while(fecha == null){
+                    try{
+                        System.out.println("Fecha de vencimiento (AAAA-MM-DD). ");
+                        fecha = LocalDate.parse(sc.nextLine());
+                    } catch (Exception e) {
+                        System.out.println("Formato de fecha no válido. Sólo se aceptan guiones y el formato indicado. Intente nuevamente. ");
+                    }
+                }
                 servicio.agregarProducto(new Comidas(productoNombre, productoPrecio, productoStock, fecha));
                 break;
             case 2:
