@@ -1,10 +1,10 @@
 package com.techlab.productos;
 import java.time.LocalDate;
 
-public class comidas extends productos {
+public class Comidas extends Productos {
     private LocalDate fechaVencimiento;
 
-    public comidas(String nombre, double precio, int stock, LocalDate fechaVencimiento) {
+    public Comidas(String nombre, double precio, int stock, LocalDate fechaVencimiento) {
         super(nombre, precio, stock);
         this.fechaVencimiento = fechaVencimiento;
     }

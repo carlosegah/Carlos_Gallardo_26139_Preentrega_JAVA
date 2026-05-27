@@ -1,9 +1,9 @@
 package com.techlab.productos;
 
-public abstract class bebidas extends productos {
+public class Bebidas extends Productos {
     private int mL;
     
-    public bebidas(String nombre, double precio, int stock, int mL) {
+    public Bebidas(String nombre, double precio, int stock, int mL) {
         super(nombre, precio, stock);
         this.mL = mL;
     }

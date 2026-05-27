@@ -1,13 +1,13 @@
 package com.techlab.productos;
 
-public class productos {
+public class Productos {
     private static int acumuladorId = 1;
     private final int id;
     private final String nombre;
     private double precio;
     private int stock;
 
-    public productos(String nombre, double precio, int stock) {
+    public Productos(String nombre, double precio, int stock) {
         this.id = acumuladorId++;
         this.nombre = nombre;
         this.precio = precio;
@@ -30,14 +30,17 @@ public class productos {
         return stock;
     }
 
-    public void setPrecioStock(double precio, int stock) {
-        if(stock < 0) {
-            throw new IllegalArgumentException("El stock no puede ser negativo.");
-        }
+    public void setPrecios(double precio) {
         if(precio < 0) {
             throw new IllegalArgumentException("El precio no puede ser negativo.");
         }
         this.precio = precio;
+    }
+
+    public void setStock(int stock) {
+        if(stock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
         this.stock = stock;
     }
 
